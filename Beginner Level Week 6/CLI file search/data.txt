@@ -1,0 +1,4 @@
+This is line one.
+I like JavaScript.
+Node.js is awesome.
+Hello from the CLI.
