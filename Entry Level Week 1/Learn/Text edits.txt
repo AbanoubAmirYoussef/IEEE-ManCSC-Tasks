@@ -1,0 +1,5 @@
+u, ins --> make underline
+b, strong --> make it bold
+i, em --> make it italic
+sub, sup --> one up one down
+mark --> highlight
