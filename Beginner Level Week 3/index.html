@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Level Week 3</title>
+</head>
+<body style="margin: 16px;">
+    <h1>Theoretical: </h1>
+    
+    <!-- Q1 -->
+    <h2 style="color: red;">Q1: Compare between the three types of quantifiers in regular expressions (?, +, *).</h2>
+    <h2 style="color: blue;">Answer:<br>-----------<br>
+        ? : Matches 0 or 1. <br>
+        + : Matches 1 or more. <br>
+        * : Matches 0 or more.
+    </h2>
+
+    <!-- Q2 -->
+    <h2 style="color: red;">Q2: What are the characters that can be represented by \w and \b in a regular expression?</h2>
+    <h2 style="color: blue;">Answer:<br>-----------<br>
+        \w → matches any word character [A-Za-z0-9] <br>
+        \b → word boundary (the start or end of a word)
+    </h2>
+
+    <!-- Q3 -->
+    <h2 style="color: red;">Q3: Compare between the Map and WeakMap according to the way they save keys and values.</h2>
+    <h2 style="color: blue;">Answer:<br>-----------<br>
+        Map:<br>
+        - Keys can be any type (string, object, etc...)<br>
+        - Iterable (Can use ForEach/Loop)<br>
+        - Not GC-Friendly<br><br>
+
+        WeakMap:<br>
+        - Keys must be objects<br>
+        - Not iterable<br>
+        - Automatically removes entries if the object is no longer referenced (GC-Friendly)
+    </h2>
+
+    <h2 style="color: red;">Q4: Write an example of a string which matches the following pattern:</h2>
+    <h2 style="color: blue;">Answer:<br>-----------<br>
+        1- 10-07-2025 / 10/07/2025 // Matches: DD-MM-YYYY / DD/MM/YYYY <br>
+        2- This is an IEEE task (Refuse ieee/IEEE in the string)
+    </h2>
+
+    <br><hr><br>
+
+    <h1>Practical: </h1>
+    <h2>Note: Please look at js file and console to see Q1, 2, 3.</h2>
+    <h2 style="color: red;">Q4: Applying the concept of closures, create a counter using JavaScript and HTML. The counter should be able to increment, decrement, and reset its value, demonstrating the practical use of closures to maintain state between function calls.</h2>
+    <div style="color: blue;">
+        <h2 id="count">Counter: 0</h2>
+        <button onclick="counter.increment()">Increment</button>
+        <button onclick="counter.decrement()">Decrement</button>
+        <button onclick="counter.reset()">Reset</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
