@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Level Week 5</title>
+  </head>
+  <body style="margin: 16px">
+    <h1>Theoretical:</h1>
+
+    <!-- Q1 -->
+    <h2 style="color: red">
+      Q1: Explain the four types of function binding in JavaScript: implicit
+      binding, explicit binding, new binding, and default binding. How do they
+      differ from each other?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      In JavaScript, this keyword binding happens in four main ways:<br />
+      1- Implicit Binding – Occurs when a function is called as a method of an
+      object. The this keyword refers to the object before the dot.<br />
+      2- Explicit Binding – Done using .call(), .apply(), or .bind() to
+      explicitly set the value of this.<br />
+      3- New Binding – Happens when a function is called with the new keyword,
+      creating a new object and setting this to it.<br />
+      4- Default Binding – Happens when a function is called without any
+      context; this defaults to the global object (window in browsers) or
+      undefined in strict mode.
+    </h2>
+
+    <!-- Q2 -->
+    <h2 style="color: red">
+      Q2: What will be the output of this code and why?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      string <br />
+      First, typeof student returns "object" because student is an object.<br />
+      Then, typeof "object" returns "string" because "object" is itself a
+      string.
+    </h2>
+
+    <!-- Q3 -->
+    <h2 style="color: red">
+      Q3: what the modules and what the differences between CommonJS modules and
+      EJS modules?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      CommonJS:<br />
+      1- Uses require() to import.<br />
+      2- Uses module.exports to export.<br />
+      3- Loads modules synchronously.<br />
+
+      ESM: <br />
+      1- Uses import statement.<br />
+      2- Uses export statement.<br />
+      3- Loads modules asynchronously.
+    </h2>
+
+    <!-- Q4 -->
+    <h2 style="color: red">
+      Q4: What is the purpose of "scripts" attribute in package.json?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      The scripts in package.json defines custom commands that can be run with
+      npm run. It is used to automate tasks like starting the server, running
+      tests.
+    </h2>
+  </body>
+</html>

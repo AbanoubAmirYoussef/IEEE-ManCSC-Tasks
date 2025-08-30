@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Level Week 5</title>
+  </head>
+  <body style="margin: 16px">
+    <h1>Theoretical - Express Section:</h1>
+
+    <!-- Q1 -->
+    <h2 style="color: red">
+      Q1: Define the "Middleware" term and it's usage in Express.js
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      A middleware in Express.js is a function that has access to the request (req), response (res), and the next middleware function (next).
+      Usage: <br>
+Modify req and res<br>
+End the request/response<br>
+Call next() to pass control to the next middleware
+    </h2>
+
+    <!-- Q2 -->
+    <h2 style="color: red">
+      Q2: What are the common reasons that can cause an Express application to hang or become unresponsive? Please provide specific scenarios or examples.
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      1- Not calling next() in a middleware function<br>
+2- Long-running or blocking code (e.g., heavy processing in the main thread)<br>
+3- Database queries not resolving or timing out<br>
+4- Forgetting to send a response (res.send(), res.end(), etc.)
+    </h2>
+
+    <!-- Q3 -->
+    <h2 style="color: red">
+      Q3: what is the method used to parse the response body comes that from HTML form?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      Use the express.urlencoded() middleware to parse incoming requests with URL-encoded payloads (e.g., HTML form submissions).
+ 
+    </h2>
+
+    <!-- Q4 -->
+    <h2 style="color: red">
+      Q4: If we access "/profile/1307?tab=friends&history=off" What will be outputted to the backend console?
+    </h2>
+    <h2 style="color: blue">Answer:<br />-----------<br />
+undefined,    because `res.params` is wrong, it should be req.params<br>
+{ tab: 'friends', history: 'off' }
+
+    </h2>
+
+    <!-- Q5 -->
+    <h2 style="color: red">
+      Q5: In a scenario, the user tries to enter the login page while he is already logged in. You, as the developer, know that he did that by mistake. So you need to send him to the homepage instead. How can you implement that in Express.js?
+    </h2>
+    <h2 style="color: blue">Answer:<br />-----------<br />
+    c. res.redirect('/')
+    </h2>
+
+    <h1>Theoretical - MongoDB Section:</h1>
+
+        <!-- Q1 -->
+    <h2 style="color: red">
+      Q1: What is the default data type of a MongoDB document id?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+The default data type of the _id field in MongoDB is ObjectId.
+
+    </h2>
+
+    <!-- Q2 -->
+    <h2 style="color: red">
+      Q2: What is the Mongoose model, How to create one and, What are its uses?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      Mongoose Model: A model is a edited version for a MongoDB collection. It provides an interface to interact with the database.<br>
+      Uses: <br>
+      1- Create, read, update, and delete documents<br>
+2- Apply validations<br>
+3- Use query helpers and middleware<br>
+    </h2>
+
+    <!-- Q3 -->
+    <h2 style="color: red">
+      Q3: What will be the output of this code?
+    </h2>
+    <h2 style="color: blue">
+      Answer:<br />-----------<br />
+      object   / x is a Query object (Promise-like)<br>
+object   / y same x<br>
+object   / z is the actual document returned
+ 
+    </h2>
+
+    <!-- Q4 -->
+    <h2 style="color: red">
+      Q4: In the following code 3b3aziz trying to update a user age in the database but it doosn't work as expected, what the problem in his code and how to solve it?
+    </h2>
+    <h2 style="color: blue">Answer:<br />-----------<br />
+      Problem: findOne is asynchronous and returns a Query, not the actual document immediately. You are trying to access user.age before the query finishes. <br>
+      Solution: Use await or a callback to ensure you have the document before updating.
+    </h2>
+
+    <!-- Q5 -->
+    <h2 style="color: red">
+      Q5: How would you add validation to a Mongoose schema to ensure a string property is at least 3 characters long?
+    </h2>
+    <h2 style="color: blue">Answer:<br />-----------<br />
+    const userSchema = new mongoose.Schema({<br>
+      username: {<br>
+      type: String,<br>
+      minlength: 3<br>
+    }<br>
+    });<br>
+    </h2>
+  </body>
+</html>
